@@ -266,3 +266,64 @@ This makes the application reliable and repeatable during demonstrations.
                          │    LLM Explanation   │
                          │       Layer          │
                          └──────────────────────┘
+
+
+💻 Run Locally
+Prerequisites
+Node.js
+npm
+Python 3.12+
+PostgreSQL
+Redis
+Backend
+cd backend
+
+Create a virtual environment:
+
+python -m venv .venv
+
+Windows:
+
+.venv\Scripts\activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Start the API:
+
+uvicorn app.main:app --reload
+
+Backend:
+
+http://localhost:8000
+
+Health check:
+
+http://localhost:8000/health
+Frontend
+cd frontend
+
+Install dependencies:
+
+npm install
+
+Start development server:
+
+npm run dev
+
+Frontend:
+
+http://localhost:5173
+🐳 Docker
+
+The complete local infrastructure can also be started using Docker Compose:
+
+docker compose up --build
+🧪 Testing
+
+Backend tests can be run with:
+
+pytest
+
+The project includes tests for core backend functionality and data-processing behavior.
